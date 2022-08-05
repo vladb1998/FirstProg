@@ -12,17 +12,14 @@ int time = 0;
         {
             time = distance / (firstFriendSpeed + dogSpeed);
             friend = 1;
-            distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
-            count += 1;
         }
         else
         {
             time = distance / (secondFriendSpeed + dogSpeed);
             friend = 2;
-            distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
-            count += 1;
         }
-        
+        count += 1;
+        distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
     }
     Console.Write("Собака пробежала (раз): ");
     Console.WriteLine(count);
